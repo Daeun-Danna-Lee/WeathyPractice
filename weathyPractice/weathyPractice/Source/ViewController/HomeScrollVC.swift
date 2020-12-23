@@ -9,21 +9,52 @@ import UIKit
 
 class HomeScrollVC: UIViewController {
 
+    @IBOutlet var timeWeatherView: UIView!
+    @IBOutlet var airView: UIView!
+    @IBOutlet var detailInfoView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setTimeWeatherView()
+        setAirView()
+        setDetailInfoView()
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension HomeScrollVC {
+    func setTimeWeatherView() {
+        timeWeatherView.layer.cornerRadius = 35.0
+        timeWeatherView.layer.masksToBounds = false
+        timeWeatherView.layer.shadowColor = UIColor.black.cgColor
+        timeWeatherView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        timeWeatherView.layer.shadowOpacity = 0.15
+        timeWeatherView.layer.shadowRadius = 10
+        timeWeatherView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
-    */
-
+    
+    func setAirView() {
+        airView.layer.cornerRadius = 35.0
+        airView.layer.masksToBounds = false
+        airView.layer.shadowColor = UIColor.black.cgColor
+        airView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        airView.layer.shadowOpacity = 0.15
+        airView.layer.shadowRadius = 10
+        airView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    func setDetailInfoView() {
+        detailInfoView.layer.cornerRadius = 35.0
+        detailInfoView.layer.masksToBounds = false
+        detailInfoView.layer.shadowColor = UIColor.black.cgColor
+        detailInfoView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        detailInfoView.layer.shadowOpacity = 0.15
+        detailInfoView.layer.shadowRadius = 10
+        detailInfoView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
 }
