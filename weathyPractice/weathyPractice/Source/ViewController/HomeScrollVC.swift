@@ -7,11 +7,14 @@
 
 import UIKit
 
-class HomeScrollVC: UIViewController {
+class HomeScrollVC: UIViewController{
 
     @IBOutlet var timeWeatherView: UIView!
     @IBOutlet var airView: UIView!
     @IBOutlet var detailInfoView: UIView!
+    @IBOutlet var homeScroll: UIScrollView!
+    
+    var scrollOffset : Int = 0
     
     
     override func viewDidLoad() {
@@ -21,8 +24,8 @@ class HomeScrollVC: UIViewController {
         setAirView()
         setDetailInfoView()
         
+        homeScroll.delegate = self 
     }
-    
 
 
 }
@@ -56,5 +59,16 @@ extension HomeScrollVC {
         detailInfoView.layer.shadowOpacity = 0.15
         detailInfoView.layer.shadowRadius = 10
         detailInfoView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+}
+
+extension HomeScrollVC : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+        self.scrollOffset = Int(scrollView.contentOffset.y)
+        
+        if self.scrollOffset <= -120 {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

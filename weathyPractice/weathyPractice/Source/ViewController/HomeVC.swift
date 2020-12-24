@@ -26,10 +26,35 @@ class HomeVC: UIViewController {
         
         setHeader()
         setBox()
+        swipeRecognizer()
         
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    func swipeRecognizer() {
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.up
+        print("swipe up detected")
+        self.view.addGestureRecognizer(swipeUp)
+        
+    }
+    
+    @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer){
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction{
+            case UISwipeGestureRecognizer.Direction.up:
+                // 스와이프 시, 원하는 기능 구현.
+                guard let dvc = self.storyboard?.instantiateViewController(identifier: "HomeScrollVC") else {
+                    return
+                }
+                dvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                dvc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                self.present(dvc, animated: true, completion: nil)
+            default: break
+            }
+        }
     }
     
 
@@ -41,7 +66,6 @@ extension HomeVC {
         maxTempLabel.alpha = 0.5
         minTempLabel.alpha = 0.5
 
-        
     }
     
     func setBox() {
