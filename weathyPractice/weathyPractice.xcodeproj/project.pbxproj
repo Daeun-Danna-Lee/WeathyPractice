@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37A8C74B25937FF400AEF259 /* HomeScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C74A25937FF400AEF259 /* HomeScrollVC.swift */; };
+		37A8C76D2595147400AEF259 /* HomeAllInOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C76C2595147400AEF259 /* HomeAllInOneVC.swift */; };
 		37BF5E8E259068F20099509E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5E8D259068F20099509E /* AppDelegate.swift */; };
 		37BF5E90259068F20099509E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5E8F259068F20099509E /* SceneDelegate.swift */; };
 		37BF5E92259068F20099509E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5E91259068F20099509E /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		37A8C74A25937FF400AEF259 /* HomeScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScrollVC.swift; sourceTree = "<group>"; };
+		37A8C76C2595147400AEF259 /* HomeAllInOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAllInOneVC.swift; sourceTree = "<group>"; };
 		37BF5E8A259068F20099509E /* weathyPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weathyPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BF5E8D259068F20099509E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37BF5E8F259068F20099509E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				37BF5E91259068F20099509E /* ViewController.swift */,
 				37BF5EB325922BA10099509E /* HomeVC.swift */,
+				37A8C76C2595147400AEF259 /* HomeAllInOneVC.swift */,
 				37A8C74A25937FF400AEF259 /* HomeScrollVC.swift */,
 			);
 			path = ViewController;
@@ -214,6 +217,7 @@
 				37BF5E92259068F20099509E /* ViewController.swift in Sources */,
 				37BF5EB425922BA10099509E /* HomeVC.swift in Sources */,
 				37BF5E8E259068F20099509E /* AppDelegate.swift in Sources */,
+				37A8C76D2595147400AEF259 /* HomeAllInOneVC.swift in Sources */,
 				37A8C74B25937FF400AEF259 /* HomeScrollVC.swift in Sources */,
 				37BF5E90259068F20099509E /* SceneDelegate.swift in Sources */,
 			);
