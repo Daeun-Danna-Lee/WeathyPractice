@@ -23,22 +23,30 @@ class HomeScrollVC: UIViewController{
         setTimeWeatherView()
         setAirView()
         setDetailInfoView()
+//        initBoxLocation()
         
         homeScroll.delegate = self 
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.timeWeatherView.alpha = 1
-//            self.timeWeatherView.frame = CGRect(x: 0, y: 0, width: 414, height: 896)
-//        })
-//    }
-
+    override func viewWillAppear(_ animated: Bool) {
+        
+        UIView.animate(withDuration: 0.7, animations: {
+            self.initBoxLocation()
+        })
+        
+    }
+    
+    func initBoxLocation() {
+        timeWeatherView.frame = CGRect(x: 30, y: 20, width: 354, height: 224)
+        airView.frame = CGRect(x: 30, y: 289, width: 354, height: 224)
+        detailInfoView.frame = CGRect(x: 30, y: 558, width: 354, height: 224)
+    }
 
 }
 
 extension HomeScrollVC {
     func setTimeWeatherView() {
+        timeWeatherView.frame = CGRect(x: 30, y: 558, width: 354, height: 224)
         timeWeatherView.layer.cornerRadius = 35.0
         timeWeatherView.layer.masksToBounds = false
         timeWeatherView.layer.shadowColor = UIColor.black.cgColor
@@ -49,6 +57,7 @@ extension HomeScrollVC {
     }
     
     func setAirView() {
+        airView.frame = CGRect(x: 30, y: 558, width: 354, height: 224)
         airView.layer.cornerRadius = 35.0
         airView.layer.masksToBounds = false
         airView.layer.shadowColor = UIColor.black.cgColor
@@ -59,6 +68,7 @@ extension HomeScrollVC {
     }
     
     func setDetailInfoView() {
+        detailInfoView.frame = CGRect(x: 30, y: 558, width: 354, height: 224)
         detailInfoView.layer.cornerRadius = 35.0
         detailInfoView.layer.masksToBounds = false
         detailInfoView.layer.shadowColor = UIColor.black.cgColor

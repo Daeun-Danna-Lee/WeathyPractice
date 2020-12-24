@@ -34,8 +34,8 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.3, animations: {
+    override func viewWillAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.5, animations: {
             self.homeMainView.alpha = 1
             self.homeMainView.frame = CGRect(x: 0, y: 0, width: 414, height: 896)
         })
