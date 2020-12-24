@@ -26,6 +26,13 @@ class HomeScrollVC: UIViewController{
         
         homeScroll.delegate = self 
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        UIView.animate(withDuration: 0.3, animations: {
+//            self.timeWeatherView.alpha = 1
+//            self.timeWeatherView.frame = CGRect(x: 0, y: 0, width: 414, height: 896)
+//        })
+//    }
 
 
 }
@@ -64,10 +71,11 @@ extension HomeScrollVC {
 
 extension HomeScrollVC : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
+//        print(scrollView.contentOffset.y)
         self.scrollOffset = Int(scrollView.contentOffset.y)
         
         if self.scrollOffset <= -120 {
+            
             self.dismiss(animated: true, completion: nil)
         }
     }

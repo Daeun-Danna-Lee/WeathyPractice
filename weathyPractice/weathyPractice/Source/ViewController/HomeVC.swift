@@ -9,6 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet var homeMainView: UIView!
     @IBOutlet var dateTimeLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var maxTempLabel: UILabel!
@@ -17,7 +18,7 @@ class HomeVC: UIViewController {
     @IBOutlet var todayWeathyView: UIView!
     @IBOutlet var boxMaxTempLabel: UILabel!
     @IBOutlet var boxMinTempLabel: UILabel!
-    @IBOutlet var boxNowTempTitleLabel: UIView!
+    @IBOutlet var boxNowTempTitleView: UIView!
     @IBOutlet var boxColdFaceImage: UIImageView!
     @IBOutlet var boxWeatherDescribeLabel: UILabel!
     
@@ -33,6 +34,13 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.homeMainView.alpha = 1
+            self.homeMainView.frame = CGRect(x: 0, y: 0, width: 414, height: 896)
+        })
+    }
+    
     func swipeRecognizer() {
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture(_:)))
         swipeUp.direction = UISwipeGestureRecognizer.Direction.up
@@ -46,12 +54,19 @@ class HomeVC: UIViewController {
             switch swipeGesture.direction{
             case UISwipeGestureRecognizer.Direction.up:
                 // 스와이프 시, 원하는 기능 구현.
-                guard let dvc = self.storyboard?.instantiateViewController(identifier: "HomeScrollVC") else {
-                    return
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.homeMainView.alpha = 0.2
+                    self.homeMainView.frame = CGRect(x: 0, y: -800, width: 414, height: 896)
+                }) { (finish) in
+                    guard let dvc = self.storyboard?.instantiateViewController(identifier: "HomeScrollVC") else {
+                        return
+                    }
+                    dvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+                    dvc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                    self.present(dvc, animated: true, completion: nil)
                 }
-                dvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                dvc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-                self.present(dvc, animated: true, completion: nil)
+                
             default: break
             }
         }
@@ -80,7 +95,7 @@ extension HomeVC {
         boxMaxTempLabel.alpha = 0.5
         boxMinTempLabel.alpha = 0.5
         
-        boxNowTempTitleLabel.layer.cornerRadius = 15
+        boxNowTempTitleView.layer.cornerRadius = 15
         
         boxColdFaceImage.alpha = 0.7
         boxWeatherDescribeLabel.alpha = 0.7
