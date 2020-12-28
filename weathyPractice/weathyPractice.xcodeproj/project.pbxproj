@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		37A8C74B25937FF400AEF259 /* HomeScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C74A25937FF400AEF259 /* HomeScrollVC.swift */; };
 		37A8C76D2595147400AEF259 /* HomeAllInOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8C76C2595147400AEF259 /* HomeAllInOneVC.swift */; };
+		37AD661D259A66A7006A7487 /* SelectTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AD661C259A66A7006A7487 /* SelectTag.storyboard */; };
+		37AD6620259A66BB006A7487 /* SelectTagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD661F259A66BB006A7487 /* SelectTagVC.swift */; };
+		37AD6623259A6827006A7487 /* TagCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD6622259A6827006A7487 /* TagCVC.swift */; };
+		37AD6626259A71D9006A7487 /* TagFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD6625259A71D9006A7487 /* TagFlowLayout.swift */; };
 		37BF5E8E259068F20099509E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5E8D259068F20099509E /* AppDelegate.swift */; };
 		37BF5E90259068F20099509E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5E8F259068F20099509E /* SceneDelegate.swift */; };
 		37BF5E92259068F20099509E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF5E91259068F20099509E /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		37A8C74A25937FF400AEF259 /* HomeScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScrollVC.swift; sourceTree = "<group>"; };
 		37A8C76C2595147400AEF259 /* HomeAllInOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAllInOneVC.swift; sourceTree = "<group>"; };
+		37AD661C259A66A7006A7487 /* SelectTag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectTag.storyboard; sourceTree = "<group>"; };
+		37AD661F259A66BB006A7487 /* SelectTagVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTagVC.swift; sourceTree = "<group>"; };
+		37AD6622259A6827006A7487 /* TagCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCVC.swift; sourceTree = "<group>"; };
+		37AD6625259A71D9006A7487 /* TagFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFlowLayout.swift; sourceTree = "<group>"; };
 		37BF5E8A259068F20099509E /* weathyPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weathyPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BF5E8D259068F20099509E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37BF5E8F259068F20099509E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 				37BF5E93259068F20099509E /* Main.storyboard */,
 				37BF5E98259068FE0099509E /* LaunchScreen.storyboard */,
 				37BF5EAF25922B810099509E /* Home.storyboard */,
+				37AD661C259A66A7006A7487 /* SelectTag.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 				37BF5EB325922BA10099509E /* HomeVC.swift */,
 				37A8C76C2595147400AEF259 /* HomeAllInOneVC.swift */,
 				37A8C74A25937FF400AEF259 /* HomeScrollVC.swift */,
+				37AD661F259A66BB006A7487 /* SelectTagVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -129,6 +139,8 @@
 		37BF5EA925906A7A0099509E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				37AD6622259A6827006A7487 /* TagCVC.swift */,
+				37AD6625259A71D9006A7487 /* TagFlowLayout.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -204,6 +216,7 @@
 				37BF5E97259068FE0099509E /* Assets.xcassets in Resources */,
 				37BF5E95259068F20099509E /* Main.storyboard in Resources */,
 				37BF5EB025922B810099509E /* Home.storyboard in Resources */,
+				37AD661D259A66A7006A7487 /* SelectTag.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,10 +229,13 @@
 			files = (
 				37BF5E92259068F20099509E /* ViewController.swift in Sources */,
 				37BF5EB425922BA10099509E /* HomeVC.swift in Sources */,
+				37AD6620259A66BB006A7487 /* SelectTagVC.swift in Sources */,
 				37BF5E8E259068F20099509E /* AppDelegate.swift in Sources */,
 				37A8C76D2595147400AEF259 /* HomeAllInOneVC.swift in Sources */,
 				37A8C74B25937FF400AEF259 /* HomeScrollVC.swift in Sources */,
 				37BF5E90259068F20099509E /* SceneDelegate.swift in Sources */,
+				37AD6623259A6827006A7487 /* TagCVC.swift in Sources */,
+				37AD6626259A71D9006A7487 /* TagFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
